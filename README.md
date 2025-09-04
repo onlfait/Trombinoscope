@@ -41,21 +41,10 @@ Designed for classrooms, workshops, or fun group activities — assign tasks ran
 
 ### Wiring
 
-| Component     | Arduino Pin |
-
-|---------------|-------------|
-
-| LED strip DIN | 15          |
-
-| Button        | 16 (to GND) |
-
-| LED strip VCC | 5V          |
-
-| LED strip GND | GND         |
-
-
-
-> Adapt pins in the code if you use another setup.
+<p align="center">
+  <img src="docs/trombi_diagram.png" title="wiring diagram">
+</p>
+Adapt pins in the code if you use another setup.
 
 
 
@@ -96,5 +85,8 @@ All settings are in the top of `trombinoscope.ino`:
 // People LEDs (indices on the strip)
 
 const uint16_t UsedLEDs[] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+
+## License
+CC-BY-SA GPLv3
 
 
