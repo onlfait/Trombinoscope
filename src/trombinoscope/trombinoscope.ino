@@ -32,8 +32,8 @@
 
 // ========================== GENERAL CONFIG ==========================
 #define LED_PIN          4              // Data pin for the LED strip
-#define NUM_LEDS         6             // Total number of LEDs on the strip/panel
-#define BUTTON_PIN       16              // Button with INPUT_PULLUP (active LOW)
+#define NUM_LEDS         30             // Total number of LEDs on the strip/panel
+#define BUTTON_PIN       6              // Button with INPUT_PULLUP (active LOW)
 
 // List of LEDs representing the people (indices on the strip)
 const uint16_t UsedLEDs[] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
