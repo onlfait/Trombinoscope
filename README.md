@@ -1,20 +1,15 @@
-\# Trombinoscope LED Selector
-
-
-
-A \*\*random people selector\*\* using a single button and a NeoPixel strip/panel.  
+<p align="center">
+  <img src="docs/trombinoscope.gif" title="Trombinoscope demo">
+</p>
+# Trombinoscope LED Selector
+**random people selector** using a single button and a NeoPixel strip/panel.  
 
 Designed for classrooms, workshops, or fun group activities — assign tasks randomly, from sweeping the floor to presenting first!
 
 
+## Features
 
----
-
-
-
-\## Features
-
-\- \*\*One button only\*\*:
+- **One button only**:
 
 &nbsp; - 1 short press → 1 person selected  
 
@@ -22,33 +17,28 @@ Designed for classrooms, workshops, or fun group activities — assign tasks ran
 
 &nbsp; - Long press → reset / cancel  
 
-\- \*\*Rainbow idle animation\*\* while waiting
+- **Rainbow idle animation** while waiting
 
-\- \*\*Flashy transition animation\*\* before selection
+- **Flashy transition animation** before selection
 
-\- \*\*Unique random selection\*\* (no duplicates in the same round)
+- **Unique random selection** (no duplicates in the same round)
 
-\- Configurable timings \& number of people
+- Configurable timings & number of people
 
-\- Works with any WS2812/WS2813 strip or panel
-
-
-
----
+- Works with any WS2812/WS2813 strip or panel
 
 
 
-\## Hardware
+## Hardware
 
-\- Arduino (Uno, Nano, ESP32, etc.)
+- Arduino (Uno, Nano, ESP32, etc.)
 
-\- WS2812/WS2813 NeoPixel LED strip/panel
+- WS2812/WS2813 NeoPixel LED strip/panel
 
-\- 1 push button wired to ground + `BUTTON\_PIN` (with `INPUT\_PULLUP`)
+- 1 push button wired to ground + `BUTTON_PIN` (with `INPUT_PULLUP`)
 
 
-
-\### Wiring
+### Wiring
 
 | Component     | Arduino Pin |
 
@@ -68,33 +58,25 @@ Designed for classrooms, workshops, or fun group activities — assign tasks ran
 
 
 
----
+## How it works
+
+1. **Idle** → Rainbow animation cycles through all people LEDs.  
+
+2. **Counting** → Each short press increments the number of people requested.  
+
+- If no press after `COUNT_WINDOW_MS` (default 900 ms), the count is frozen.  
+
+3. **Animation** → A colorful “storm” plays for `ANIM_MS` (default 1.8 s).  
+
+4. **Show** → Randomly pick `K` unique people and light them in **white**.  
+
+- Display lasts `HOLD_MS` (default 10 s).  
+
+5. Return to **Idle** and repeat.
 
 
 
-\## How it works
-
-1\. \*\*Idle\*\* → Rainbow animation cycles through all people LEDs.  
-
-2\. \*\*Counting\*\* → Each short press increments the number of people requested.  
-
-&nbsp;  - If no press after `COUNT\_WINDOW\_MS` (default 900 ms), the count is frozen.  
-
-3\. \*\*Animation\*\* → A colorful “storm” plays for `ANIM\_MS` (default 1.8 s).  
-
-4\. \*\*Show\*\* → Randomly pick `K` unique people and light them in \*\*white\*\*.  
-
-&nbsp;  - Display lasts `HOLD\_MS` (default 10 s).  
-
-5\. Return to \*\*Idle\*\* and repeat.
-
-
-
----
-
-
-
-\## Configuration
+## Configuration
 
 All settings are in the top of `trombinoscope.ino`:
 
@@ -102,17 +84,16 @@ All settings are in the top of `trombinoscope.ino`:
 
 ```cpp
 
-\#define LED\_PIN        15
+#define LED_PIN        15
 
-\#define NUM\_LEDS       30
+#define NUM_LEDS       30
 
-\#define BUTTON\_PIN     16
+#define BUTTON_PIN     16
 
 
 
 // People LEDs (indices on the strip)
 
-const uint16\_t UsedLEDs\[] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
-
+const uint16_t UsedLEDs[] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
 
 
