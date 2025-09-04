@@ -31,8 +31,8 @@
 #include <Adafruit_NeoPixel.h>
 
 // ========================== GENERAL CONFIG ==========================
-#define LED_PIN          15              // Data pin for the LED strip
-#define NUM_LEDS         30             // Total number of LEDs on the strip/panel
+#define LED_PIN          4              // Data pin for the LED strip
+#define NUM_LEDS         6             // Total number of LEDs on the strip/panel
 #define BUTTON_PIN       16              // Button with INPUT_PULLUP (active LOW)
 
 // List of LEDs representing the people (indices on the strip)
