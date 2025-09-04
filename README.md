@@ -1,6 +1,7 @@
 <p align="center">
   <img src="docs/trombinoscope.gif" title="Trombinoscope demo">
 </p>
+
 # Trombinoscope LED Selector
 **random people selector** using a single button and a NeoPixel strip/panel.  
 
