@@ -64,7 +64,8 @@ Adapt pins in the code if you use another setup.
 
 5. Return to **Idle** and repeat.
 
-
+## License
+CC-BY-SA GPLv3
 
 ## Configuration
 
@@ -74,11 +75,11 @@ All settings are in the top of `trombinoscope.ino`:
 
 ```cpp
 
-#define LED_PIN        15
+#define LED_PIN        4
 
 #define NUM_LEDS       30
 
-#define BUTTON_PIN     16
+#define BUTTON_PIN     6
 
 
 
@@ -86,7 +87,6 @@ All settings are in the top of `trombinoscope.ino`:
 
 const uint16_t UsedLEDs[] = {0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
 
-## License
-CC-BY-SA GPLv3
+
 
 
